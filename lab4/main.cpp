@@ -27,7 +27,7 @@ int kth_selection(const vector<int> &v, size_t k) {
         return kth_selection(right, k);
 }
 vector<string> subsets(size_t n){
-
+    vector<string> v(n);
 }
 
 int main() {
