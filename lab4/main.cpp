@@ -29,32 +29,28 @@ int kth_selection(const vector<int> &v, size_t k) {
 }
 
 vector<string> subsets(size_t n){
-    string subet;
-    if (n < 0){
-        cout << subet <<endl;
-        vector<string> v;
-        v.push_back(subet);
-        return v;
+    vector<string> v;
+    vector<string> b;
+    
+    if(n == 0)
+        v.push_back("");
+    else{
+        b = subsets(n-1);
+        for(auto it = b.begin(); it != b.end(); ++it){
+            v.push_back("0" + *it);
+        }
+        
+        for(auto it = b.rbegin(); it != b.rend(); ++it)
+            v.push_back("1" + *it);
     }
-    cout << subet << endl;
-    subet.at(n) = 0;
-    subsets(n-1);
-    subet.at(n) = 1;
-    subsets(n-1);
-
+    return v;
 }
 
-
 int main() {
-    //vector<int> v= {2,3,1,0,4,2,1,3};
-    //cout << kth_selection(v, 3) << endl;
-//    vector<string> v = subsets(4);
-//    for (auto it = v.begin(); it != v.end(); ++it) {
-//        cout << *it << endl;
-//    }
-    string test(5,2);
-    //test.at(2) = 1;
-    cout << test << endl;
-
+//    vector<int> v= {2,3,1,0,4,2,1,3};
+//    cout << kth_selection(v, 3) << endl;
+    vector<string> v = subsets(4);
+    for (auto it = v.begin(); it != v.end(); ++it)
+        cout << *it << endl;
     return 0;
 }
