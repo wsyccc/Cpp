@@ -1,0 +1,61 @@
+/*
+Nov 4 C++11
+
+Classes:
+    standard member functions:
+        constructor
+        default constructor?   
+        copy constructor
+        move constructor
+        copy assignment
+        move assignment
+    access specifier: public , protected, private
+        class c{
+            public:
+                // interface for everyone
+            protected:
+                // interface for current class + its subclasses and their friends 
+            private:
+                // interface for current callsand its friends
+         };
+     
+    Java         VS     C++ terminology
+    Method       =      Member function
+    superclass   =      base class
+    subclass     =      derived class
+
+    the implementation of a class can be in a separate file (in .cpp) from the class definition or it can be in the same file
+    
+    Class code: implement shapes // "probably will give us the code later" shapes.cpp
+    
+    Abstract Base Class (ABC)
+     - A class with at least 1 pure virtual function
+     - It cannot be instantiated
+    
+    Pure virtual function:
+        virtual void f() = 0;
+    virtual function:
+        virtual void g();
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
